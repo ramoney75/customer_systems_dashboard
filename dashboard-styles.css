@@ -1,0 +1,32 @@
+ul
+{
+    padding: 2px;
+}
+
+li.pipeline
+{
+    background-color: silver;
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+    font-family: Helvetica;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+li.stage
+{
+    list-style-type: none;
+    font-size: 12pt;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    padding: 0px;
+}
+
+li.job
+{
+    list-style-type: none;
+
+}
+
