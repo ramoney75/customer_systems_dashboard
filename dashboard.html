@@ -9,24 +9,26 @@
     <script id="pipeline-template" type="text/haml">
 %ul
   %li.pipeline
-    = pipeline.name
+    %h2
+        = pipeline.name
     %ul
       - for (i=0; i < pipeline.stages.length; i++) {
         %li.stage{class: pipeline.stages[i].color}
           %h2
-            = pipeline.stages[i].name
+            = pipeline.stages[i].name  + ' (' + pipeline.stages[i].jobs.length + ' jobs)'
           %ul
             - for (j=0; j < pipeline.stages[i].jobs.length; j++ ) {
               %li.job{class: pipeline.stages[i].jobs[j].color}
                 %h2
-                  =pipeline.stages[i].jobs[j].name
+                  %a{href: pipeline.stages[i].jobs[j].url}
+                    =pipeline.stages[i].jobs[j].name
             - }
       - }
     </script>
 </head>
 <body>
-<div id="formatted-data" style="border: 1px red solid"></div>
-<div id="raw-json" style='border: 1px black solid'></div>
+<div id="formatted-data"></div>
+<!--<div id="raw-json" style='border: 1px black solid'></div>-->
 </body>
 <script type="text/javascript" src="dashboard.js"></script>
 </html>

@@ -1,17 +1,53 @@
+li a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+li a:hover
+{
+    text-decoration: underline;
+}
+
+
 ul
 {
     padding: 0px;
 }
 
-li.pipeline
+h2
 {
+    margin: 0;
+    -webkit-margin-after: 0.2em;
+}
+
+body
+{
+    font-family: Helvetica;
+    background-color: #f2f7fb;
+}
+
+li.pipeline
+{   
     background-color: white;
     list-style-type: none;
-    margin: 2px;
+    margin: 0px;
     padding: 0px;
-    font-family: Helvetica;
-    font-size: 14pt;
+}
+
+li.pipeline > h2
+{
+    color: #475369;
+    font-size: 60pt;
     font-weight: bold;
+    text-shadow: -1px -2px 1px black;
+    
+}
+
+li.pipeline > ul
+{
+    border: 1px solid #b4cee5;
+    padding: 25px;
 }
 
 
@@ -20,47 +56,90 @@ li.stage
     list-style-type: none;
     display: inline-block;
     vertical-align: top;
-    margin: 0;
-    padding: 0;
+    margin-right: 25px;
+    padding: 0px;
     border: 1px solid #7490a8;
+    width: 500px
 }
 
-li.stage h2
+li.stage > h2
 {
     margin: 0px;
-    padding: 10px;
-    font-size: 12pt;
+    padding: 12px;
+    font-size: 40px;
+    font-weight: 800;
     background-color: #f2f7fb;
+    padding-left: 70px;
+}
+
+li.stage.red > h2
+{
+    background: url(star-gray-icon.png) no-repeat 6px 6px #f2f7fb;
+}
+
+li.stage.blue_anime > h2
+{
+    background: url(star-icon.png) no-repeat 6px 6px #f2f7fb;
+    color: blue;
+}
+
+li.stage.blue > h2
+{
+    background: url(star-icon.png) no-repeat 6px 6px #f2f7fb;
 }
 
 li.job
 {
     list-style-type: none;
     border-top: 1px solid #c0d6eb;
-    
+    padding-left: 50px;
+
 }
 
-li.job h2
+li.job > h2
 {
     margin: 0px;
     padding: 10px;
     list-style-type: none;
     background-color: #ffffff;
-    font-size: 12pt;
+    font-size: 40px;
 }
 
-li.job.ok
+li.job.red
+{
+    background: url(red-light-icon.png) no-repeat 0px 0px;
+    color: black;
+}
+
+li.job.red_anime
+{
+    background: url(yellow-light-icon.png) no-repeat 0px 0px;
+    color: orange;
+}
+
+li.job.red > h2
+{
+    color: #d33d3c;
+}
+
+li.job.transparent > h2
+{
+    color: silver;
+    text-decoration: line-through;
+}
+
+li.job.blue
 {
     display: none;
 }
+
+li.job.blue_anime
+{
+    display: none;
+}
+
 
 li.job.broken
 {
     font-color: red;
 }
-
-li.job.building {
-    background-color: blue;
-}
-
-

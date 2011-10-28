@@ -9,7 +9,7 @@ function renderJson(parsedJson) {
 function processData(data) {
   $('#raw-json').append(data);
   var parsedJson = $.parseJSON(data);
-  $('formatted-data').append(parsedJson[0]['name']);
+  //$('formatted-data').append(parsedJson[0]['name']);
   renderJson(parsedJson);
 }
 
