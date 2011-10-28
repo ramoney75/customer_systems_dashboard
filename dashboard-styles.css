@@ -1,14 +1,14 @@
 ul
 {
-    padding: 2px;
+    padding: 0px;
 }
 
 li.pipeline
 {
-    background-color: silver;
+    background-color: white;
     list-style-type: none;
     margin: 2px;
-    padding: 2px;
+    padding: 0px;
     font-family: Helvetica;
     font-size: 14pt;
     font-weight: bold;
@@ -22,6 +22,7 @@ li.stage
     vertical-align: top;
     margin: 0;
     padding: 0;
+    border: 1px solid #7490a8;
 }
 
 li.stage h2
@@ -35,10 +36,14 @@ li.stage h2
 li.job
 {
     list-style-type: none;
+    border-top: 1px solid #c0d6eb;
+    
 }
 
 li.job h2
 {
+    margin: 0px;
+    padding: 10px;
     list-style-type: none;
     background-color: #ffffff;
     font-size: 12pt;

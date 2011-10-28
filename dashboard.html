@@ -12,48 +12,21 @@
     = pipeline.name
     %ul
       - for (i=0; i < pipeline.stages.length; i++) {
-        %li.stage
+        %li.stage{class: pipeline.stages[i].color}
           %h2
             = pipeline.stages[i].name
           %ul
             - for (j=0; j < pipeline.stages[i].jobs.length; j++ ) {
-              %li.job
+              %li.job{class: pipeline.stages[i].jobs[j].color}
                 %h2
                   =pipeline.stages[i].jobs[j].name
             - }
       - }
-    </script>
-    <script>
-        /*var fakeJson = '[{"stages": [{"color": "red", "jobs": [{"color": "blue", "url": "http://ci.cp.vpc.realestate.com.au:8080/jobs/cp-01-quality", "name": "cp-01-quality"}, {"color": "red", "url": "http://ci.cp.vpc.realestate.com.au:8080/jobs/cp-09-performance", "name": "cp-09-performance"}, {"color": "blue", "url": "http://ci.cp.vpc.realestate.com.au:8080/jobs/cp-10-features-5", "name": "cp-10-features-5"}], "name": "Commit"}, {"color": "red", "jobs": [{"color": "red", "claim": "Bertrand", "url": "http://10.113.192.70:9080/jobs/Premiere", "name": "Premiere"}], "name": "Acceptance"}, {"color": "blue", "jobs": [{"color": "blue", "url": "http://ci.cp.vpc.realestate.com.au:8080/jobs/cp-rpmify", "name": "cp-rpmify"}], "name": "Package"}], "name": "Customer Systems"}]'
-         */
-        var parsedJson;
-        var pipelineTemplate = haml.compileHaml('pipeline-template');
-
-        function fetchData() {
-            $.get('http://10.113.192.74/pipelines', processData);
-        }
-
-        function processData(data) {
-                $('#raw-json').append(data);
-                parsedJson = $.parseJSON(data);
-                //alert(jsonData.errors);
-                $('formatted-data').append(parsedJson[0]['name']);
-                renderJson(parsedJson);
-            }
-        fetchData();
-        //fetchFakeData();
-
-        function renderJson(parsedJson) {
-            for (i = 0; i < parsedJson.length; i++) {
-                pipeline = parsedJson[i];
-                $('#formatted-data').html(pipelineTemplate.call(this, {pipeline: pipeline}));
-            }
-        }
-
     </script>
 </head>
 <body>
 <div id="formatted-data" style="border: 1px red solid"></div>
 <div id="raw-json" style='border: 1px black solid'></div>
 </body>
+<script type="text/javascript" src="dashboard.js"></script>
 </html>
