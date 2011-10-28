@@ -14,19 +14,48 @@ li.pipeline
     font-weight: bold;
 }
 
+
 li.stage
 {
     list-style-type: none;
-    font-size: 12pt;
     display: inline-block;
     vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+li.stage h2
+{
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
+    font-size: 12pt;
+    background-color: #f2f7fb;
 }
 
 li.job
 {
     list-style-type: none;
-
 }
+
+li.job h2
+{
+    list-style-type: none;
+    background-color: #ffffff;
+    font-size: 12pt;
+}
+
+li.job.ok
+{
+    display: none;
+}
+
+li.job.broken
+{
+    font-color: red;
+}
+
+li.job.building {
+    background-color: blue;
+}
+
 
