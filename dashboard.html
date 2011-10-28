@@ -13,11 +13,13 @@
     %ul
       - for (i=0; i < pipeline.stages.length; i++) {
         %li.stage
-          = pipeline.stages[i].name
+          %h2
+            = pipeline.stages[i].name
           %ul
             - for (j=0; j < pipeline.stages[i].jobs.length; j++ ) {
               %li.job
-              =pipeline.stages[i].jobs[j].name
+                %h2
+                  =pipeline.stages[i].jobs[j].name
             - }
       - }
     </script>
