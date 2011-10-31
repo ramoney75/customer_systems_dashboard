@@ -137,6 +137,12 @@ li.job.transparent > h2
     text-decoration: line-through;
 }
 
+li.job.disabled > h2
+{
+    background: url(grey-light-icon.png) no-repeat 0px 5px;
+    color: silver;
+}
+
 li.job.blue
 {
     display: none;
