@@ -41,7 +41,7 @@ li.pipeline > h2
     font-size: 60pt;
     font-weight: bold;
     text-shadow: -1px -2px 1px black;
-    
+    padding: 5px;   
 }
 
 li.pipeline > ul
@@ -50,6 +50,15 @@ li.pipeline > ul
     padding: 25px;
 }
 
+li.pipeline.blocked > h2
+{
+    color: #d33d3c;
+}
+
+li.pipeline.blocked > ul
+{
+    display: none;
+}
 
 li.stage
 {
@@ -99,21 +108,21 @@ li.job
 li.job > h2
 {
     margin: 0px;
-    padding: 10px;
+    padding: 8px;
     list-style-type: none;
     background-color: #ffffff;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 li.job.red
 {
-    background: url(red-light-icon.png) no-repeat 0px 0px;
+    background: url(red-light-icon.png) no-repeat 0px 5px;
     color: black;
 }
 
 li.job.red_anime
 {
-    background: url(yellow-light-icon.png) no-repeat 0px 0px;
+    background: url(yellow-light-icon.png) no-repeat 0px 5px;
     color: orange;
 }
 

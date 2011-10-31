@@ -25,10 +25,36 @@
             - }
       - }
     </script>
+    <script id="summary-pipeline-template" type="text/haml">
+%ul
+  %li.pipeline.summary{class: pipeline.can_commit ? "" : "blocked"}
+    %h2
+        = pipeline.name
+    %ul
+      - for (i=0; i < pipeline.stages.length; i++) {
+        %li.stage{class: pipeline.stages[i].color}
+          %h2
+            = pipeline.stages[i].name  + ' (' + pipeline.stages[i].jobs.length + ' jobs)'
+          %ul
+            - for (j=0; j < pipeline.stages[i].jobs.length; j++ ) {
+              %li.job{class: pipeline.stages[i].jobs[j].color}
+                %h2
+                  %a{href: pipeline.stages[i].jobs[j].url}
+                    =pipeline.stages[i].jobs[j].name
+            - }
+      - }
+    </script>
+    <script id="last-updated-template" type="text/haml">
+%div{style: 'bottom: 50px; position: fixed; text-align: right; width: 100%'}
+  = updateTime
+  !=  '&nbsp;&nbsp';
+    </script>
+
 </head>
 <body>
 <div id="formatted-data"></div>
-<!--<div id="raw-json" style='border: 1px black solid'></div>-->
+<div id="raw-json" style='display: none'></div>
+<div id="raw-job-json" style='display: none'></div>
 </body>
 <script type="text/javascript" src="dashboard.js"></script>
 </html>
