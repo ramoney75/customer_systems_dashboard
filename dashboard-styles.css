@@ -121,12 +121,12 @@ li.job > h2
     opacity: .7;
     color: black;
     border-style: dashed;
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 45px;
+    font-weight: 700;
     -webkit-transform: rotate(-35deg);
     margin: 0;
-    margin-left: 30%;
-    margin-top: 15%;
+    margin-left: 20%;
+    margin-top: 10%;
     position: absolute;
     top: 0;
     z-index: 1;
