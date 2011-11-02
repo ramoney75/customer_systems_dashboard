@@ -22,6 +22,10 @@
                 %h2
                   %a{href: pipeline.stages[i].jobs[j].url}
                     =pipeline.stages[i].jobs[j].name
+                - if (pipeline.stages[i].jobs[j].claim) {
+                  %span.claim
+                    = pipeline.stages[i].jobs[j].claim
+                - }
             - }
       - }
     </script>

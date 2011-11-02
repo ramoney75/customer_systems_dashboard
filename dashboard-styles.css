@@ -95,6 +95,7 @@ li.stage.blue_anime > h2
 li.stage.blue > h2
 {
     background: url(star-icon.png) no-repeat 6px 6px #f2f7fb;
+    
 }
 
 li.job
@@ -102,7 +103,7 @@ li.job
     list-style-type: none;
     border-top: 1px solid #c0d6eb;
     padding-left: 50px;
-
+    position: relative;
 }
 
 li.job > h2
@@ -115,6 +116,22 @@ li.job > h2
     font-weight: 800;
 }
 
+.claim
+{
+    opacity: .7;
+    color: black;
+    border-style: dashed;
+    font-size: 40px;
+    font-weight: 500;
+    -webkit-transform: rotate(-35deg);
+    margin: 0;
+    margin-left: 30%;
+    margin-top: 15%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
 li.job.red
 {
     background: url(red-light-icon.png) no-repeat 0px 5px;
@@ -122,6 +139,12 @@ li.job.red
 }
 
 li.job.red_anime
+{
+    background: url(yellow-light-icon.png) no-repeat 0px 5px;
+    color: orange;
+}
+
+li.job.aborted_anime
 {
     background: url(yellow-light-icon.png) no-repeat 0px 5px;
     color: orange;
