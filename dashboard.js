@@ -1,7 +1,7 @@
 var settings = {
   url: 'http://10.113.192.74/pipelines',
-  full_pipelines: ["Customer Systems"],
-  summary_pipelines: ["Agent Desktop"]
+  full_pipelines: ["Customer Systems"]
+//  ,summary_pipelines: ["Agent Desktop"]
 }
 
 function renderJson(parsedJson) {
