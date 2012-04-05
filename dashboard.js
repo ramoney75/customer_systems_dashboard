@@ -1,6 +1,6 @@
 var settings = {
-  url: 'http://10.113.192.74/pipelines',
-  full_pipelines: ["Agent Admin"]
+    url: 'http://10.113.192.74/pipelines',
+    full_pipelines: ["Agent Admin", "Agent Desktop", "Customer Platform - Agent Admin", "Customer Platform - Domain"]
 //  ,summary_pipelines: ["Agent Desktop"]
 }
 
