@@ -92,10 +92,17 @@ li.stage.blue_anime > h2
     color: blue;
 }
 
+li.stage.red_anime > h2
+{
+    background: url(star-gray-icon.png) no-repeat 6px 6px #f2f7fb;
+    color: orange;
+}
+
+
 li.stage.blue > h2
 {
     background: url(star-icon.png) no-repeat 6px 6px #f2f7fb;
-    
+    color: blue;
 }
 
 li.job

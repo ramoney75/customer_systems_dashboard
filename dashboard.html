@@ -49,6 +49,10 @@
       - }
     </script>
     <script id="last-updated-template" type="text/haml">
+%div{style: 'float: left'}
+  %a{href: '#', onClick: 'javascript:stopRefresh()'}< stop
+  != '&nbsp;'
+  %a{href: '#', onClick: 'javascript:fetchData()'} start
 %div{style: 'bottom: 50px; position: fixed; text-align: right; width: 100%'}
   = updateTime
   !=  '&nbsp;&nbsp';

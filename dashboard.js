@@ -1,8 +1,10 @@
 var settings = {
     url: 'http://10.113.192.74/pipelines',
-    full_pipelines: ["Agent Admin", "Agent Desktop", "Customer Platform - Agent Admin", "Customer Platform - Domain"]
+    full_pipelines: ["Agent Admin", "Agent Desktop", "Customer Platform - Agent Admin", "Customer Platform - Domain", "Customer Platform - E2E Smoke Test"]
 //  ,summary_pipelines: ["Agent Desktop"]
 }
+
+var refreshHandle;
 
 function renderJson(parsedJson) {
   $('#formatted-data').html('');
@@ -23,16 +25,21 @@ function renderJson(parsedJson) {
 }
 
 function processData(data) {
-  $('#raw-json').append(data);
+  elem = $('#raw-json');
+  elem.empty();
+  elem.append(data);
   var parsedJson = $.parseJSON(data);
   renderJson(parsedJson);
 }
 
 function fetchData() {
   $.get(settings.url, processData);
-  setTimeout(fetchData, 5000);
+  refreshHandle = setTimeout(fetchData, 5000);
 }
 
+function stopRefresh() {
+	clearTimeout(refreshHandle);
+}
 function fetchJobs() {
   $.get('http://10.113.192.74/jobs', processJobs);
 }
